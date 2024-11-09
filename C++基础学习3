@@ -1,0 +1,116 @@
+//3.常量和变量：
+//生活中的一些数据
+//有些数据不能变：血型、性别、圆周率
+//有些数据可以变：年龄、身高、体重、工资
+
+//在C语言中的描述：
+//变量：能被改变的量
+//常量：不能被改变的量
+
+//int main()
+//{
+//	//创建一个变量
+//	//int=类型、age=变量的名字、=是赋值的意思、23是数值
+//	int age = 23;
+//	double weight = 66.7;
+//	age = age + 1;
+//	weight = weight + 10;
+//	printf("%d\n", age);
+//	printf("%lf\n", weight);
+//	//float用%f，double用%lf,整形用%d。
+//	return 0;
+//}
+
+//变量的分类：
+//局部变量
+//全局变量
+
+//大括号外部的是全局变量-a=全局变量
+//int a = 100;
+//
+//int main()
+//{
+//	//大括号内的都是局部变量-a=局部变量
+//	//当局部变量与全局变量名字冲突时，局部优先。
+//	int a = 10;
+//	printf("%d\n", a);
+//	return 0;
+//}
+
+//写一个代码，求两个整数的和。
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int sum = 0;
+//	scanf("%d %d", &a, &b);
+//		//scanf函数是输入函数
+//	//想要使用scanf函数必须在全文开头加上：#define _CRT_SECURE_NO_WARNINGS 1
+//		sum = a + b;
+//		printf("sum = %d", sum);
+//	return 0;
+//}
+
+////作业1：计算矩形的面积和周长
+//
+//1.	输入矩形的长和宽（两个浮点数）。
+//2.	计算并输出矩形的面积和周长。
+//
+//示例：
+//•	输入：5.5 3.2
+//•	输出：
+//•	面积 : 17.6
+//•	周长 : 17.4
+
+//int main()
+//{
+//	float l = 0;
+//	float w = 0;
+//	float sum1 = 0;
+//	float sum2 = 0;
+//	scanf("%f %f", &l, &w);
+//	sum1 = l * w;
+//	sum2 = (l + w) * 2;
+//	printf("sum1 = %f ,sum2 = %f", sum1, sum2);
+//
+//
+//
+//	return 0;
+//}
+
+
+//作业2：简单利息计算
+
+//1.	输入本金（整数）、利率（百分比，浮点数）、存款年数（整数）。
+//2.	使用公式 利息 = 本金 * 利率 * 年数 计算利息并输出。
+//
+//示例：
+//•	输入：本金：1000, 利率：5.0, 年数：3
+//•	输出：利息：150.0
+
+#include <stdio.h>
+
+int main() {
+    int principal;         // 本金
+    float rate;            // 利率（百分比）
+    int years;             // 存款年数
+    float interest;        // 利息
+
+    // 输入本金、利率和年数
+    printf("请输入本金: ");
+    scanf("%d", &principal);
+
+    printf("请输入利率（百分比）: ");
+    scanf("%f", &rate);
+
+    printf("请输入存款年数: ");
+    scanf("%d", &years);
+
+    // 计算利息（将百分比转换为小数）
+    interest = principal * (rate / 100) * years;
+
+    // 输出利息
+    printf("利息 = %.2f\n", interest);
+
+    return 0;
+}
