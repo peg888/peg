@@ -1,0 +1,57 @@
+////数据类型：
+////计算机语言-写程序-解决生活中的问题
+////必须有能力来描述生活中的问题
+////购物商城-上架商品，价格-15.6元-小数
+//// 年龄50岁-整数
+////C语言-浮点数（小数点）
+////     -整型
+//
+////a
+////'a'-字符a
+//
+//int main()
+//{
+//	//char=字符类型
+//	char ch = 'a';
+//	//int=整型
+//		int age = 20;
+//		//short int=短整型
+//		short num = 10;
+//
+//		//long=长整型
+//		//long long=长长整型
+//
+//		//float=单精度浮点型
+//		float weight = 55.5;
+//		//double=双精度浮点型
+//		double d =0.0；
+// 提供如此多类型的目的是：节省内存，提高空间利用率。
+//	return 0;
+//}
+int main()
+{
+	printf("hrhr\n");
+	printf("你好世界！\n");
+	printf("%d\n", 100);//打印一个整数=%d
+
+
+	//sizeof-关键字-操作符-计算机类型或者变量所占空间的大小
+	printf("%d\n", sizeof(short));
+	printf("%d\n", sizeof(char));
+	printf("%d\n", sizeof(int));
+	printf("%d\n", sizeof(long));
+	printf("%d\n", sizeof(long long));
+	printf("%d\n", sizeof(float));
+	printf("%d\n", sizeof(double));
+
+	//sizeof的单位是：byte
+	//计算机中的单位：
+	//bit-比特位-用来存放一个二进制位的
+	//byte-字节-8bit
+	//kb-1024byte
+	//mb-1024kb
+	//gb-1024mb
+	//tb-1024gb
+	//pb-1024gb
+	return 0;
+}
