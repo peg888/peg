@@ -1,0 +1,137 @@
+//题目三：交换两个变量的值
+//定义两个整数变量，要求用户输入它们的值。
+//交换这两个变量的值，并输出交换后的结果。
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 0;
+//	int b = 0;
+//	int c = 0;
+//	int d = 0;
+//
+//	printf("请输入数值a：");
+//	scanf("%d", &a);
+//
+//	printf("请输入数值b：");
+//		scanf ("%d", &b );
+//
+//		c =  a;
+//		d =  b;
+//		printf("数值a是：%d \n", d);
+//		printf("数值b是：%d \n", c);
+//
+//
+//
+//
+//	return 0;
+//}
+
+//计算一个学生的总成绩和平均成绩
+//定义三个浮点数变量，分别存储三门科目的成绩。
+//输入每门科目的成绩，计算总成绩和平均成绩并输出。
+
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//int main()
+//{
+//	float a = 0;
+//	float b = 0;
+//	float c = 0;
+//	float d = 0;//总成绩
+//	float e = 0;//平均成绩
+//	printf("请输入你的数学成绩：");
+//	scanf("%f", &a);
+//	printf("请输入你的语文成绩：");
+//	scanf("%f", &b);
+//	printf("请输入你的英语成绩：");
+//	scanf("%f", &c);
+//	d = a + b + c;
+//	e = (a + b + c) / 3;
+//	//%.2f中的.2是保留两位小数的意思！
+//	printf("你的总成绩为：%.2f\n", d);
+//	printf("你的平均成绩为：%.2f\n", e);
+//
+//
+//	return 0;
+//}
+
+//定义一个浮点数变量，用来存储半径。
+//使用公式
+//面积=𝜋×𝑟的平方（假设𝜋 为 3.14159）计算圆的面积。输出面积的结果。
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//int main()
+//{
+//	float a = 0;//半径
+//	float b = 3.14159;//𝜋
+//	float c = 0;//面积
+//	printf("请输入圆的半径：");
+//	scanf("%f", &a);
+//	c = b * (a * a);
+//	printf("这个圆的面积为：%f\n", c);
+//
+//
+//	return 0;
+//}
+
+//计算矩形的面积和周长
+//用户输入矩形的长和宽（假设为 length 和 width）。
+//根据输入的长和宽，计算矩形的面积和周长。矩形的面积公式：面积 = 长 × 宽
+//矩形的周长公式：周长 = 2 ×(长 + 宽)
+//输出矩形的面积和周长。
+
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//int main()
+//{
+//	float a = 0;//长
+//	float b = 0;//宽
+//	float c = 0;//周长
+//	float d = 0;//面积
+//	printf("请输入该矩形的长：");
+//	scanf("%f", &a);
+//	printf("请输入该矩形的宽：");
+//	scanf("%f", &b);
+//	c = 2 * (a + b);
+//	d = a * b;
+//	printf("该矩形的周长为：%.2f\n", c);
+//	printf("该矩形的面积为：%.2f\n", d);
+//
+//
+//	return 0;
+//}
+
+
+//计算圆柱体的表面积和体积
+//用户输入圆柱体的半径 r 和高度 h。
+//使用以下公式来计算圆柱体的表面积和体积：圆柱体的体积公式：体积 = 𝜋 * r * r * h
+//圆柱体的表面积公式：表面积 = 2 * 𝜋 * r * (r + h)
+//假设 𝜋 = 3.14159。
+//输出圆柱体的体积和表面积。
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+int main()
+{
+	float a = 0;//半径；
+	float b = 0;//高
+	float c = 3.14159;//𝜋
+	float d = 0;//体积
+	float e = 0;//表面积
+	printf("请输入圆柱体的半径：");
+	scanf("%f", &a);
+	printf("请输入圆柱体的高：");
+	scanf("%f", &b);
+	d = c * a * a * b;
+	e = 2 * c * a * (a + b);
+	printf("该圆柱体的体积为：%.2f\n", d);
+	printf("该圆柱体的表面积为：%.2f\n", e);
+
+
+	return 0;
+}
