@@ -1,0 +1,230 @@
+//四、变量的作用域与生命周期
+// 
+//1.作用域：那里起作用那里就是变量的作用域
+//局部变量的作用域：就是变量所在的局部范围。
+//全局变量的作用域：整个工程。
+
+//
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+
+//int g = 2021;//全局变量
+//
+//int main()
+//{
+//	printf("1: %d\n", g);
+//	//printf("a= %d", a);
+//	{
+//		printf("2: %d\n", g);
+//		int a = 10;
+//	}
+//	printf("3: %d\n", g);
+//	//a在哪个大括号内被声明，哪个就是它的作用域。
+//
+//	return 0;
+//}
+
+
+
+//从整个工程调用全局变量
+//extern 是声明的意思，在该文件中声明一下全局变量就可从整个工程文件中调用全局变量。
+
+//extern int gvc;
+//int main()
+//{
+//	printf("gvc: %d", gvc);
+//	return 0;
+//}
+
+//2.生命周期
+//变量的生命周期：变量的创建到销毁
+//局部变量的生命周期：进入局部范围生命周期开始，出局部范围生命周期结束。
+//全局变量的生命周期：就是程序的生命周期。
+
+//int main()
+//{
+//
+//
+//	{
+//	
+//		int a = 10;
+//		printf("%d \n", a);
+//	
+//	}
+//	return 0;
+//}
+
+
+//常量
+//1.字面常量
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//
+//#define max 10000
+//int main()
+//{
+	//字面常量
+	//3.14;
+	//10;
+	//'a';
+	//"abcdefg";
+
+	//const修饰的常变量
+	//int num = 10;//变量
+	//num = 20;
+	//const int a = 20;//常变量-具有常属性（不能改变的属性）
+	//const修饰后不可更改
+	//a = 50;
+	//printf("num= %d", num);//20
+	//int arr[10] = { 0 };//10个元素
+	//int n = 10;
+	//int arr2[n] = { 0 };//n是变量的，这里是不行的
+
+/*
+	int arr[10] = { 0 };
+	const int n = 10;
+	int arr2[n] = { 0 };*///不可运行的原因是n的本质是变量，被const修饰后为常变量，并不是常量。
+
+	//3.define定义的标识符常量
+	//max=20000//是错误的，因为#define定义的标识符常量是不可以更改的
+	/*int a = max;
+	printf("a= %d", a);*/
+
+//	return 0;
+//}
+
+
+
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//
+//
+////性别
+//enum sex
+//{
+//	//这种枚举类型的变量的未来可能取值
+//	//枚举常量：只能引用这三个值内的
+//	male = 3,//赋初值（赋予最开始的值）
+//	female,
+//	secret
+//
+//};
+////枚举常量从0开始
+//int main()
+//{
+//	//4.枚举常量
+//	//可以一一列举的常量
+//	//male=3;//这是错误的，枚举常量是不可更改的。
+//	enum sex a = male;
+//	printf("%d\n", male);
+//	printf("%d\n", female);
+//	printf("%d\n", secret);
+//	return 0;
+//}
+
+//练习题
+//练习题 1：计算圆的周长和面积
+//定义一个常量 PI 值为 3.14159，然后编写程序让用户输入圆的半径，并计算该圆的周长和面积。
+//公式：
+//周长 = 2 × PI × 半径
+//面积 = PI × 半径 × 半径
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//#define PI  3.14159
+//int main()
+//{
+//	float a = 0;//半径
+//	float b = 0;//周长
+//	float c = 0;//面积
+//	printf("请输入圆的半径：");
+//	scanf("%f", &a);
+//	b = 2 * PI * a;
+//	c = PI * a * a;
+//	printf("圆的周长为：%.2f\n", b);
+//	printf("圆的面积为：%.2f\n", c);
+//
+//	return 0;
+//}
+
+//练习题 2：计算矩形的周长和面积
+//使用常量定义矩形的宽和高，例如定义宽为 10，高为 5。
+//计算并输出该矩形的周长和面积。
+//公式：
+//周长 = 2 ×(宽 + 高)
+//面积 = 宽 × 高
+//
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//
+//#define a 10 //宽
+//#define b 5//高
+//int main()
+//{
+//	float c = 0;//周长
+//	float d = 0;//面积
+//	c = 2 * (a + b);
+//	d = a * b;
+//
+//	printf("该矩形的周长为：%.2f\n", c);
+//	printf("该矩形的面积为：%.2f\n", d);
+//
+//	return 0;
+//}
+
+
+
+//练习题 3：温度转换
+//定义一个常量 FACTOR 为 5.0 / 9.0 和 BASE 为 32。
+//编写程序，接收一个华氏温度值，将其转换为摄氏温度并输出。
+//公式：摄氏温度 = (华氏温度 - BASE) × FACTOR
+
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//#define FACTOR 5.0/9.0
+//#define BASE 32
+//int main()
+//{
+//	float a = 0;//华氏度
+//	float b = 0;//摄氏度
+//	printf("请输入华氏度：");
+//	scanf("%f", &a);
+//	b = (a - BASE) * FACTOR;
+//	printf("摄氏度为：%.2f\n", b);
+//
+//	return 0;
+//}
+//
+//
+//练习题 4：计算物品总价格
+//定义一个常量 TAX_RATE 表示税率，例如 0.08。
+//程序中接收商品单价和数量，并计算商品总价和含税总价。
+//公式：
+//含税总价 = 总价 ×(1 + TAX_RATE)
+
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+#define TAX_RATE 0.08 //税率
+int main()
+{
+	float a = 0;//单价
+	float b = 0;//数量
+	float c = 0;//总价
+	float d = 0;//含税总价
+	printf("请输入商品单价：");
+	scanf("%f", &a);
+	printf("请输入商品数量：");
+	scanf("%f", &b);
+	c = a * b;
+	d = c * (1 + TAX_RATE);
+	printf("该商品的总价为： %.2f\n", c);
+	printf("该商品的含税总价为：%.2f\n", d);
+
+
+	return 0;
+
+}
