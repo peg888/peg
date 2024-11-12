@@ -1,0 +1,102 @@
+//练习：
+//1. 计算圆柱体体积和表面积
+//定义 π = 3.14159，输入半径 r 和高 h。
+//公式：
+//圆柱体积：体积 = π * r ^ 2 * h
+//圆柱表面积：表面积 = 2 * π * r * (r + h)
+//
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//#define X 3.14159
+//int main()
+//{
+//	float a = 0;//半径
+//	float b = 0;//高
+//	float c = 0;//体积
+//	float d = 0;//表面积
+//	printf("请输入该圆柱体的半径：");
+//	scanf("%f", &a);
+//	printf("请输入该圆柱体的高：");
+//	scanf("%f", &b);
+//	c = X * a * a * b;
+//	d = 2 * X * a * (a + b);
+//	printf("该圆柱体的体积为： %.2f \n", c);
+//	printf("该圆柱体的表面积为： %.2f \n", d);
+//	return 0;
+//}
+
+//2. 税后总收入计算
+//假设税率为 taxRate（20 % ），用户输入工资收入 income。
+//公式：
+//税后总收入：税后收入 = 总收入 * (1 - 税率)
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//#define X 0.2//税率
+//int main()
+//{
+//	float a = 0;//总收入
+//	float b = 0;//税后收入
+//	printf("请输入您的工资收入：");
+//	scanf("%f", &a);
+//	b = a * (1 - X);
+//	printf("您的税后收入为： %.2f\n", b);
+//
+//
+//	return 0;
+//}
+
+
+//3. 汇率转换
+//假设美元兑换人民币的汇率为 exchangeRate。让用户输入美元金额 usd。
+//公式：
+//人民币金额：人民币金额 = 美元金额 * 汇率
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include <stdio.h>
+//#define X 7.1//汇率
+//int main()
+//{
+//	float a = 0;//美元
+//	float b = 0;//人民币
+//	printf("请输入美元金额：");
+//	scanf("%f", &a);
+//	b = a * X;
+//	printf("人民币金额为： %.2f\n", b);
+//	return 0;
+//}
+
+
+
+//字符串：就是一串字符--用双引号括起来的一串字符
+
+
+#define _CRT_SECURE_NO_WARNINGS 1
+#include <stdio.h>
+//int main()
+//{
+//	"abcdsdasd";//字符串
+//	"hello"//字符串
+//
+//	return 0;
+//}
+int main()
+{
+	//字符数组-数组是一组相同类型的元素
+	//字符串在结尾的位置隐藏了\0的字符
+	//  \0是字符串的结束标志
+	/*char arr[] = "hello";*/
+
+	//打印一个字符串
+	char arr1[] = "abc";//""打印出来是abc\0,\0是字符串的结束标志。
+	char arr2[] = { 'a','b','c'};
+	//{''}打印出来是abc，因为没有结束标志所以abc后面空间放的内容是未知的,缺少'\0'
+	//printf("%s \n", arr1);
+	//printf("%s \n", arr2);
+	printf("%d \n", strlen(arr1));
+	printf("%d \n", strlen(arr2));//因为未加\0结束标志，所以打印出来的字符串长度是随机值。
+	int len = strlen("abc");//string length（求字符串的长度函数）
+	/*printf("%d", len);*/  //显示3个长度，\0是以结束标志存在的，
+	//当我们求长度的时候他是不算在里面的。
+	//如果出现警告“strlen”未定义；假设外部返回 int。
+	//是因为没有引用头文件 #include <string.h>,引用该头文件后不会出现报错。
+	return 0;
+}
